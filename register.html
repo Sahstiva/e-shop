@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap"
+        rel="stylesheet">
+    <title>Интернет-магазин - главная страница</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header__wrapper">
+            <div class="header__logo_wrapper">
+                <img class="header__logo" src="img/logo.svg" width="44" height="38" alt="Логотип">
+                <img src="img/lens.svg" width="27" height="27" alt="Поиск">
+                <input type="text" class="header__search">
+            </div>
+            <div class="header__list_wrapper">
+                <ul class="header__list">
+                    <li><button class="header__button" id="menu_button"><img src="img/burger.svg" width="32" height="32"
+                                alt="Меню"></button></li>
+                    <li><button class="header__button"><img src="img/man.svg" width="32" height="32"
+                                alt="Войти"></button></li>
+                    <li><button class="header__button"><img src="img/basket.svg" width="32" height="32"
+                                alt="Корзина"></button></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="header__navigation">
+            <img src="img/cross.svg" width="12" height="12" alt="Закрыть" class="header__navigation_close">
+            <h2 class="header__navigation_heading">menu</h2>
+            <ul class="header__navigation_list">
+                <li>
+                    <h3 class="header__navigation_list_heading">man</h3>
+                    <ul>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Bags</a></li>
+                        <li><a href="">Denim</a></li>
+                        <li><a href="">T-Shirts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="header__navigation_list_heading">woman</h3>
+                    <ul>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Jackets & Coats</a></li>
+                        <li><a href="">Polos</a></li>
+                        <li><a href="">T-Shirts</a></li>
+                        <li><a href="">Shirts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h3 class="header__navigation_list_heading">kids</h3>
+                    <ul>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">Jackets & Coats</a></li>
+                        <li><a href="">Polos</a></li>
+                        <li><a href="">T-Shirts</a></li>
+                        <li><a href="">Shirts</a></li>
+                        <li><a href="">Bags</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="register">
+            <div class="registration__heading">
+                <div class="registration__heading_wrapper container">
+                    <h2>registration</h2>
+                </div>
+            </div>
+            <div class="registration__content_wrapper container">
+                <form action="" method="post" class="registration__form">
+                    <label for="name" class="registration__form_name_label">your name</label>
+                    <input type="text" class="registration__form_input" id="name">
+                    <input type="text" class="registration__form_input" id="surname">
+
+                    <div class="registration__form_radio_wrapper">
+                        <input type="radio" name="gender" id="male" class="registration__form_radio">
+                        <label for="male" class="registration__form_gender">male</label>
+
+                        <input type="radio" name="gender" id="female" class="registration__form_radio">
+                        <label for="female" class="registration__form_gender">female</label>
+                    </div>
+
+                    <label for="email" class="registration__form_login_label">login details</label>
+                    <input type="email" class="registration__form_input" id="email">
+                    <input type="password" class="registration__form_input" id="password">
+                    <p class="registration__form_text">Please use 8 or more characters, with at least 1 number and a
+                        mixture of uppercase and lowercase letters</p>
+
+                    <button type="submit" class="registration__form_submit">join now
+                        <img src="img/arrow.svg" class="registration__form_submit_arrow" alt="Отправить">
+                    </button>
+                </form>
+                <div class="registration__text">
+                    <h3 class="registration__text_heading">loyalty has its perks</h3>
+                    <p class="registration__text_subheading">Get in on the loyalty program where you can earn points and
+                        unlock serious perks. Starting with these as soon as you join:</p>
+                    <ul class="registration__list">
+                        <li class="registration__list_item">15% off welcome offer</li>
+                        <li class="registration__list_item">Free shipping, returns and exchanges on all orders</li>
+                        <li class="registration__list_item">$10 off a purchase on your birthday</li>
+                        <li class="registration__list_item">Early access to products</li>
+                        <li class="registration__list_item">Exclusive offers & rewards</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section class="subscribe">
+            <div class="container subscribe__wrapper">
+                <h2 class="visually-hidden">Subscribe</h2>
+                <ul class="subscribe__list">
+                    <li class="subscribe__list_item">
+                        <img class="subscribe__list_item_img" src="img/woman_face.png" width="96" alt="Subscribe">
+                        <p class="subscribe__list_item_text">“Vestibulum quis porttitor dui! Quisque viverra nunc
+                            mi,<span class="subscribe__list_item_italic">a pulvinar purus condimentum“</span></p>
+                    </li>
+                    <li class="subscribe__list_item">
+                        <h3 class="subscribe__list_item_heading">subscribe</h3>
+                        <h4 class="subscribe__list_item_subheading">for our newletter and promotion</h4>
+                        <div class="subscribe__list_input_wrapper">
+                            <input class="subscribe__list_item_input" type="text" placeholder="enter your email">
+                            <button class="subscribe__list_item_button">subscribe</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="copyright">
+            <ul class="copyright__list container">
+                <li>
+                    <p class="copyright__list_text">&copy; 2021 Brand All Rights Reserved.</p>
+                </li>
+                <li>
+                    <ul class="copyright__list_social">
+                        <li class="copyright__list_social_item"><img class="copyright__list_social_img"
+                                src="img/facebook.svg" alt="Facebook"></li>
+                        <li class="copyright__list_instagram_item"><img class="copyright__list_social_img"
+                                src="img/instagram.svg" alt="Instagram"></li>
+                        <li class="copyright__list_social_item"><img class="copyright__list_social_img"
+                                src="img/pinterest.svg" alt="Pinterest"></li>
+                        <li class="copyright__list_social_item"><img class="copyright__list_social_img"
+                                src="img/twitter.svg" alt="Twitter"></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
