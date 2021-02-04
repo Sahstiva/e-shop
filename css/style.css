@@ -26,6 +26,7 @@ body {
 
 .header {
   background-color: #222224;
+  position: relative;
 }
 
 .header__wrapper {
@@ -130,11 +131,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #F1E4E6;
 }
 
 .intro__heading_wrapper {
-  width: 100%;
+  width: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,7 +304,6 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  position: relative;
 }
 
 .featured__item_heading {
@@ -330,11 +333,22 @@ body {
   margin: 18px 18px 0 18px;
 }
 
+.featured__item_imgwrapper {
+  position: relative;
+}
+
+.featured__item_overlay {
+  width: 360px;
+  height: 420px;
+  background: rgba(58, 56, 56, 0.86);
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
 .featured__item_button {
   border: 1px solid #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -345,9 +359,10 @@ body {
   min-width: 138px;
   background: transparent;
   position: absolute;
-  top: 187.5px;
-  left: 111px;
-  display: none;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .featured__item_btntxt {
@@ -589,5 +604,168 @@ body {
 
 .copyright__list_instagram_item {
   background-color: #F16D7F;
+}
+
+.registration__heading {
+  background: #F8F3F4;
+  min-height: 148px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.registration__heading_wrapper {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 29px;
+  text-transform: uppercase;
+  color: #F16D7F;
+}
+
+.registration__content_wrapper {
+  padding: 64px 0 96px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.registration__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.registration__form_name_label {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  color: #222224;
+  text-transform: capitalize;
+}
+
+.registration__form_input {
+  max-width: 360px;
+  min-height: 44px;
+  border: 1px solid #A4A4A4;
+  margin: 20px 0 0 0;
+}
+
+.registration__form_radio_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.registration__form_radio {
+  margin: 33px 20px 0 0;
+  display: none;
+}
+
+.registration__form_gender {
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 13px;
+  color: #000000;
+  text-transform: capitalize;
+  margin: 34px 20px 0 34px;
+  position: relative;
+}
+
+.registration__form_gender::before {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+  left: -34px;
+  top: -3px;
+}
+
+.registration__form_login_label {
+  margin: 34px 0 0 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 19px;
+  color: #222224;
+  text-transform: capitalize;
+}
+
+.registration__form_text {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px;
+  color: #B1B1B1;
+  margin: 15px 0 0 0;
+  display: block;
+  max-width: 360px;
+}
+
+.registration__form_submit {
+  width: 167px;
+  height: 50px;
+  background: #F16D7F;
+  margin: 40px 0 0 0;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border: none;
+}
+
+.registration__text_heading {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.registration__text_subheading {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  color: #000000;
+  margin: 22px 0 0 0;
+  display: block;
+  max-width: 650px;
+}
+
+.registration__list {
+  list-style: none;
+}
+
+.registration__list_item {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  color: #000000;
+  margin: 16px 0 0 43px;
+  position: relative;
+}
+
+.registration__list_item::before {
+  content: url("../img/check.svg");
+  position: absolute;
+  left: -43px;
 }
 /*# sourceMappingURL=style.css.map */
