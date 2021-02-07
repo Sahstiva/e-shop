@@ -1,0 +1,12 @@
+.heading {
+
+    background: $pinkbg-color;
+    min-height: 148px;
+    @include flex-center-space-between;
+
+    &__heading {
+        @include font(24px,29px,400);
+        text-transform: uppercase;
+        color: $pink-color;
+    }    
+}

@@ -22,8 +22,13 @@
             </div>
             <div class="header__list_wrapper">
                 <ul class="header__list">
-                    <li><button type="button" class="header__button" id="menu_button"><img src="img/burger.svg"
-                                width="32" height="32" alt="Меню"></button></li>
+                    <li><button type="button" class="header__button" id="menu_button"><svg width="32" height="23"
+                                viewBox="0 0 32 23" xmlns="http://www.w3.org/2000/svg" class="header__icon">
+                                <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z"
+                                    fill="#E8E8E8" />
+                            </svg>
+                        </button>
+                    </li>
                     <li><button type="button" class="header__button"><img src="img/man.svg" width="32" height="32"
                                 alt="Войти"></button></li>
                     <li><button type="button" class="header__button"><img src="img/basket.svg" width="32" height="32"
@@ -70,46 +75,66 @@
     </header>
     <main class="main">
         <section class="heading">
-            <h2 class="heading__heading container">registration</h2>
+            <h2 class="heading__heading container">shopping cart</h2>
         </section>
-        <section class="registration">
-            <div class="registration__content_wrapper container">
-                <form action="" method="post" class="registration__form">
-                    <fieldset class="registration__fieldset">
-                        <label for="name" class="registration__form_name_label">your name</label>
-                        <input type="text" class="registration__form_input" id="name" placeholder="First name">
-                        <input type="text" class="registration__form_input" id="surname" placeholder="Last name">
-                    </fieldset>
-                    <fieldset class="registration__fieldset_radio">
-                        <input type="radio" name="gender" id="male" class="registration__form_radio">
-                        <label for="male" class="registration__form_gender">male</label>
-
-                        <input type="radio" name="gender" id="female" class="registration__form_radio">
-                        <label for="female" class="registration__form_gender">female</label>
-                    </fieldset>
-                    <fieldset class="registration__fieldset">
-                        <label for="email" class="registration__form_login_label">login details</label>
-                        <input type="email" class="registration__form_input" id="email" placeholder="Email">
-                        <input type="password" class="registration__form_input" id="password" placeholder="Passsword">
-                        <p class="registration__form_text">Please use 8 or more characters, with at least 1 number and a
-                            mixture of uppercase and lowercase letters</p>
-                    </fieldset>
-                    <button type="submit" class="registration__form_submit">join now
-                    </button>
-                </form>
-                <div class="registration__text">
-                    <h3 class="registration__text_heading">loyalty has its perks</h3>
-                    <p class="registration__text_subheading">Get in on the loyalty program where you can earn points and
-                        unlock serious perks. Starting with these as soon as you join:</p>
-                    <ul class="registration__list">
-                        <li class="registration__list_item">15% off welcome offer</li>
-                        <li class="registration__list_item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="registration__list_item">$10 off a purchase on your birthday</li>
-                        <li class="registration__list_item">Early access to products</li>
-                        <li class="registration__list_item">Exclusive offers & rewards</li>
+        <section class="cart container">
+            <h2 class="visually-hidden">корзина</h2>
+            <ul class="cart__list">
+                <li class="cart__list_item">
+                    <img src="img/cart_man_in_hoody.jpg" alt="Man in hoody" width="262" height="306"
+                        class="cart__list_item_img">
+                    <div class="cart__list_item_wrapper">
+                        <h3 class="cart__list_item_heading">mango people t-shirt</h3>
+                        <p class="cart__list_item_text">Price: <span class="cart__list_item_pink">$300</span></p>
+                        <p class="cart__list_item_text">Color: Red</p>
+                        <p class="cart__list_item_text">Size: Xl</p>
+                        <div class="cart__list_item_qty_wrapper">
+                            <p class="cart__list_item_text">Quantity:</p><input type="text" class="cart__list_item_qty"
+                                placeholder="2">
+                        </div>
+                    </div>
+                </li>
+                <li class="cart__list_item">
+                    <img src="img/cart_man_in_red.jpg" alt="Man in red" width="262" height="306"
+                        class="cart__list_item_img">
+                    <div class="cart__list_item_wrapper">
+                        <h3 class="cart__list_item_heading">mango people t-shirt</h3>
+                        <p class="cart__list_item_text">Price: <span class="cart__list_item_pink">$300</span></p>
+                        <p class="cart__list_item_text">Color: Red</p>
+                        <p class="cart__list_item_text">Size: Xl</p>
+                        <div class="cart__list_item_qty_wrapper">
+                            <p class="cart__list_item_text">Quantity:</p><input type="text" class="cart__list_item_qty"
+                                placeholder="2">
+                        </div>
+                    </div>
+                </li>
+                <li class="cart__list_item">
+                    <ul class="cart__list_buttons">
+                        <li><button type="reset" class="cart__list_button">clear shopping cart</button></li>
+                        <li><button type="button" class="cart__list_button">continue shopping</button></li>
                     </ul>
+                </li>
+            </ul>
+            <form action="post" class="cart__shipping">
+                <h3 class="cart__shipping_heading">shipping adress</h3>
+                <label for="city" class="visually-hidden">City</label>
+                <input type="text" name="city" class="cart__shipping_input" placeholder="Bangladesh">
+                <label for="state" class="visually-hidden">State</label>
+                <input type="text" name="state" class="cart__shipping_input" placeholder="State">
+                <label for="zip" class="visually-hidden">Postcode/zip</label>
+                <input type="text" name="zip" class="cart__shipping_input" placeholder="Postcode / Zip">
+                <button type="submit" class="cart__shipping_button">get a quote</button>
+                <div class="cart__total">
+                    <div class="cart__total_text_wrapper">
+                        <p class="cart__subtotal_text">sub total $900</p>
+                        <p class="cart__grandtotal_text">grand total $900</p>
+                    </div>
+                    <div class="cart__total_checkout_wrapper">
+                        <hr class="cart__total_line">
+                        <button type="button" class="cart__total_checkout">proceed to checkout</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </section>
     </main>
     <footer>
@@ -159,7 +184,6 @@
         <a class="debuglist__link" href="register.html">register</a>
         <a class="debuglist__link" href="cart.html">cart</a>
     </div>
-
 </body>
 
 </html>

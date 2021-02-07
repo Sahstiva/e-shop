@@ -1,0 +1,137 @@
+.registration {
+
+    &__content_wrapper {
+        padding: 64px 0 96px 0;
+        @include flex-center-space-between;
+    }
+
+    &__form, &__fieldset {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form_name_label {
+        @include font(16px,19px);
+        color: $black-color;
+        text-transform: capitalize;
+    }
+
+    &__form_input {
+        max-width: 360px;
+        min-height: 44px;
+        border: 1px solid #A4A4A4;
+        margin: 20px 0 0 0;
+        padding: 0 0 0 17px;
+        text-transform: capitalize;
+        ::-webkit-input-placeholder {
+            color: $lightgraytext-color;
+            @include font(13px,16px);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+        :-ms-input-placeholder {
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+          :-moz-placeholder { /* Firefox 18- */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+    }
+
+    &__fieldset_radio {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__form_radio {
+        margin: 33px 20px 0 0;
+        display: none;
+    }
+    &__form_gender {
+        @include font(11px,13px);
+        color: $darkblack-color;
+        text-transform: capitalize;
+        margin: 34px 20px 0 34px;
+        position: relative;
+    }
+
+    &__form_gender::before {
+        position: absolute;
+        content: "";
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        border: 1px solid #A4A4A4;
+        left: -34px;
+        top: -3px;
+    }
+
+    &__form_login_label {
+        margin: 34px 0 0 0;
+        @include font(16px,19px);
+        color: $black-color;
+        text-transform: capitalize;
+    }
+
+    &__form_text {
+        @include font(13px,16px);
+        color: $lightgraytext-color;
+        margin: 15px 0 0 0;
+        display: block;
+        max-width: 360px;
+    }
+
+    &__form_submit {
+        width: 167px;
+        height: 50px;
+        margin: 40px 0 0 0;
+        background: $pink-color;
+        color: $white-color;
+        text-transform: uppercase;
+        border: none;
+        position: relative;
+        text-align: left;
+        padding: 0 0 0 30px;
+    }
+
+    &__form_submit::after {
+        content: url("../img/arrow.svg");
+        position: absolute;
+        right: 30px;
+    }
+
+    &__text_heading {
+        @include font(24px,29px);
+        color: $darkblack-color;
+        text-transform: uppercase;
+    }
+
+    &__text_subheading {
+        @include font(24px,29px);
+        color: $darkblack-color;
+        margin: 22px 0 0 0;
+        display: block;
+        max-width: 650px;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__list_item {
+        @include font(24px,29px);
+        color: $darkblack-color;
+        margin: 16px 0 0 43px;
+        position: relative;
+    }
+
+    &__list_item::before {
+        content: url("../img/check.svg");
+        position: absolute;
+        left: -43px;
+    }
+}
+

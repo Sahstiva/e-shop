@@ -1,0 +1,51 @@
+.stock {
+    
+    &__list {
+        @include flex-center-space-between;
+        flex-wrap: wrap;
+        padding: 65px 0 0 0;
+    }
+
+    &__item {
+        width: 360px;
+        min-height: 260px;
+        background-blend-mode: overlay;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__item_heading {
+        @include font(16px,19px,400);
+        text-align: center;
+        color: $white-color;
+        text-transform: uppercase;
+    }
+
+    &__item_text {
+        @include font(24px,29px,700);
+        text-align: center;
+        color: $pink-color;
+        text-transform: uppercase;
+
+    }
+
+    &__item_woman {
+        background: url("../img/img_item_woman.jpg"), rgba(33, 22, 22, 0.7);
+    }
+
+    &__item_man {
+        background: url("../img/img_item_man.jpg"), rgba(33, 22, 22, 0.7);
+    }
+
+    &__item_kids {
+        background: url("../img/img_item_kid.jpg"), rgba(33, 22, 22, 0.7);
+    }
+
+    &__item_accessoires {
+        background: url("../img/img_item_accessoires.jpg"), rgba(33, 22, 22, 0.7);
+        width: 100%;
+        min-height: 180px;
+        margin: 30px 0 0 0;
+    }
+}
