@@ -1,0 +1,78 @@
+.header {
+    background-color: $black-color;
+    position: relative;
+
+    &__wrapper {
+        min-height: 75px;
+        @include flex-center-space-between;
+    }
+
+    &__logo_wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__search {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__icon {
+        fill: $lightergray-color;
+    }
+    &__button {
+        @include flex-center-space-between;
+        background-color: transparent;
+        border: 0;
+        margin: 0 0 0 33px;
+
+        &:hover .header__icon {
+            fill: red;
+            cursor: pointer;
+        }
+    }
+
+    &__navigation {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        min-width: 232px;
+        min-height: 745px;
+        background: $white-color;
+        border: 1px solid blue;
+        padding: 17px 17px 0 34px;
+    }
+    
+    &__navigation_close {
+        margin: 0 0 0 210px;
+        background: transparent;
+    }
+    &__navigation_heading {
+        @include font(14px,17px,700);
+        color: $darkblack-color;
+        text-transform: uppercase;
+    }
+
+    &__navigation_list_heading {
+        @include font(14px,17px,400);
+        color: $pink-color;
+        text-transform: uppercase;
+        margin: 24px 0 12px 0;
+    }
+
+    &__navigation_list a {
+        text-decoration: none;
+        @include font(14px,17px,400);
+        color: $graytext-color;
+        margin: 0 0 11px 22px;
+        display: block;
+    }
+}

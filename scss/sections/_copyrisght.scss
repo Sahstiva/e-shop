@@ -1,0 +1,42 @@
+.copyright {
+    background: $black-color;
+    padding: 25px 0 25px 0;
+
+    &__list {
+        @include flex-center-space-between;
+    }
+    &__list_social {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+
+    &__list_text {
+        @include font(16px,19px,400);
+        color: $lightergray-color;
+    }
+
+    &__list_social_img, &__list_instagram_img {
+        background: transparent;
+    }
+
+    &__list_social_item, &__list_instagram_item {
+        width: 32px;
+        height: 32px;
+        background-color: $white-color;
+        @include flex-center;
+        margin: 0 4px 0 4px;
+    }
+
+    &__list_social_item:hover {
+        background-color: $pink-color;
+    }
+
+    &__list_instagram_item {
+        background-color: $pink-color;
+    }
+    &__list_instagram_item:hover {
+        background-color: $white-color;
+    }
+
+}

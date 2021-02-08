@@ -1,0 +1,36 @@
+.advantages {
+    background-color: $black-color;
+    margin: 95px 0 0 0;
+    min-height: 340px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding: 100px 0 100px 0;
+    }
+
+    &__list_item {
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item_heading {
+        @include font(20px,24px,400);
+        color: $lightergray-color;
+        margin: 28px 0 16px 0;
+    }
+
+    &__item_text {
+        @include font(14px,17px);
+        color: $lightergray-color;
+        text-align: center;
+    }
+
+    &__item_img {
+        background: transparent;
+        min-height: 40px;
+    }
+}

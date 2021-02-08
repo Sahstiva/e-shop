@@ -1,0 +1,176 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 96px 0 0 0;
+    }
+
+    &__list_item {
+        width: 652px;
+        max-height: 306px;
+        filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+        display: flex;
+        margin: 0 0 40px 0;
+    }
+
+    &__list_item_wrapper::after {
+        position: absolute;
+        content: url("../img/cross.svg");
+        top: 20px;
+        right: 20px;
+    }
+    &__list_item_wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 390px;
+        padding: 22px 30px 0 30px;
+        background-color: $white-color;
+        position: relative;
+    }
+
+    &__list_item_qty_wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+
+    &__list_item_heading {
+        @include font(24px,29px,400);
+        text-transform: uppercase;
+        color: $black-color;
+        max-width: 200px;
+        flex-wrap: wrap;
+        margin: 0 0 42px 0;
+    }
+
+    &__list_item_text {
+        @include font(22px,26px,400);
+        color: $darkgray-color;
+        margin: 0 0 6px 0;
+    }
+
+    &__list_item_pink {
+        color: $pink-color;
+    }
+
+    &__list_item_qty {
+        width: 44px;
+        height: 25px;
+        margin: 0 0 0 25px;
+    }
+
+    &__list_buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__list_button {
+        width: 234px;
+        height: 49px;
+        border: 1px solid $grayborder-color;
+        @include font(14px,17px);
+        text-transform: uppercase;
+        background-color: $white-color;
+    }
+
+    &__list_button:hover {
+        background-color: $grayborder-color;
+        color: $white-color;
+    }
+
+    &__shipping {
+        margin: 96px 0 0 130px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__shipping_heading {
+        @include font(16px,19px);
+        color: $black-color;
+        text-transform: uppercase;
+        padding: 13px 0 20px 0;
+    }
+
+    &__shipping_input {
+        width: 360px;
+        height: 45px;
+        margin: 0 0 20px 0;
+    }
+
+    &__shipping_button {
+        width: 100px;
+        height: 34px;
+        @include flex-center;
+        text-transform: uppercase;
+        @include font(11px,13px);
+        background-color: $white-color;
+        border: 1px solid $grayborder-color;
+    }
+
+    &__total {
+        width: 360px;
+        height: 214px;
+        background-color: $grayback-color;
+        margin: 57px 0 0 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__total_text_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 40px 30px 0 0;
+    }
+
+    &__subtotal_text {
+        @include font(11px,13px);
+        color: $grayborder-color;
+        text-transform: uppercase;
+    }
+
+    &__grandtotal_text {
+        @include font(16px,19px);
+        color: $black-color;
+        text-transform: uppercase;
+        margin: 12px 0 0 0;
+    }
+
+    &__total_checkout_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__total_line {
+        width: 275px;
+        background-color: $grayline-color;
+        margin: 21px 0 0 0;
+    }
+
+    &__total_checkout {
+        width: 273px;
+        height: 50px;
+        background-color: $pink-color;
+        color: $white-color;
+        @include font(16px,19px);
+        text-transform: uppercase;
+        margin: 17px 0 0 0;
+        border: none;
+    }
+
+    &__total_checkout:hover {
+        background-color: $white-color;
+        color: $pink-color;
+        border: 1px solid $pink-color;
+    }
+}

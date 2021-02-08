@@ -1,0 +1,34 @@
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $lightpink-color;
+    
+    &__heading_wrapper {
+        width: 800px;
+        display: flex;
+        justify-content: start;
+        padding: 0 0 0 40px;
+    }
+
+    &__heading_verticalbox {
+        background: $pink-color;
+        min-width: 12px;
+        min-height: 92px;
+        margin: 0 16px 0 0;
+    }
+
+    &__heading {
+        @include font(48px,58px,900);
+        text-transform: uppercase;
+    }
+
+    &__text {
+        @include font(37px,44px,700);
+        display: block;
+    }
+
+    &__pink {
+        color: $pink-color;
+    }
+}
