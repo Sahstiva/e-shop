@@ -1,6 +1,10 @@
 .featured {
     padding: 98px 0 0 0;
 
+    @include tablet {
+        padding: 154px 0 0 0;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -103,5 +107,9 @@
         margin: 48px 0 0 0;
         color: $pink-border-color;
         background: $white-color;
+
+        @include mobile {
+            margin: 42px 0 96px 0;
+        }
     }
 }

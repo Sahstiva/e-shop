@@ -1,14 +1,26 @@
 .intro {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: $lightpink-color;
     
     &__heading_wrapper {
-        width: 800px;
+        width: 50%;
         display: flex;
         justify-content: start;
         padding: 0 0 0 40px;
+
+        @include mobile {
+            width: 100%;
+            min-height: 363px;
+            align-items: center;
+        }
+    }
+
+    &__img {
+        @include mobile {
+            display: none;
+        }
     }
 
     &__heading_verticalbox {
@@ -16,19 +28,40 @@
         min-width: 12px;
         min-height: 92px;
         margin: 0 16px 0 0;
+
+        @include mobile {
+            min-height: 61px;
+        }
     }
 
     &__heading {
         @include font(48px,58px,900);
         text-transform: uppercase;
+
+        @include tablet {
+            @include font (44px,52.8px,900);
+        }
+
+        @include mobile {
+            @include font(38px,45.6px,900);
+        }
     }
 
     &__text {
         @include font(37px,44px,700);
         display: block;
+
+        @include tablet {
+            @include font(24px,28.8px,700);
+        }
+
+        @include mobile {
+            @include font(20px,24px,700);
+        }
     }
 
     &__pink {
         color: $pink-color;
     }
+
 }

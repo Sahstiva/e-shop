@@ -4,15 +4,28 @@
         @include flex-center-space-between;
         flex-wrap: wrap;
         padding: 65px 0 0 0;
+
+        @include tablet {
+            padding: 20px 0 0 0;
+        }
+
+        @include mobile {
+            justify-content: center;
+        }
     }
 
     &__item {
-        width: 360px;
+        width: 31.6%;
         min-height: 260px;
         background-blend-mode: overlay;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mobile {
+            width: 91.7%;
+            margin: 32px 0 0 0;
+        }
     }
 
     &__item_heading {
@@ -47,5 +60,11 @@
         width: 100%;
         min-height: 180px;
         margin: 30px 0 0 0;
+
+        @include mobile {
+            width: 91.7%;
+            margin: 32px 0 0 0;
+            min-height: 111px;
+        }
     }
 }

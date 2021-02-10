@@ -4,16 +4,28 @@
 
     &__list {
         @include flex-center-space-between;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
     }
     &__list_social {
         display: flex;
         flex-direction: row;
         justify-content: end;
+
+        @include mobile {
+            margin: 43px 0 0 0;
+        }
     }
 
     &__list_text {
         @include font(16px,19px,400);
         color: $lightergray-color;
+
+        @include mobile {
+            margin: 40px 0 0 0;
+        }
     }
 
     &__list_social_img, &__list_instagram_img {

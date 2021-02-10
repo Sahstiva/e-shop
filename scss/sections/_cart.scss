@@ -1,6 +1,9 @@
 .cart {
-    display: flex;
-    justify-content: space-between;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;    
+    }
 
     &__list {
         display: flex;
@@ -173,4 +176,5 @@
         color: $pink-color;
         border: 1px solid $pink-color;
     }
+
 }
