@@ -25,36 +25,53 @@
     }
 
     &__icon {
-        fill: $lightergray-color;
+        fill: $grayicons-color;
     }
+
+    &__burger {
+        padding: 3px 0 0 0;
+    }
+
     &__button {
         @include flex-center-space-between;
         background-color: transparent;
-        border: 0;
+        border: none;
         margin: 0 0 0 33px;
 
         &:hover .header__icon {
-            fill: red;
+            fill: $pink-color;
             cursor: pointer;
         }
+
+    }
+
+    &__search_button {
+        margin: 0;
     }
 
     &__navigation {
         display: none;
         position: absolute;
-        right: 0;
+        right: 0px;
         top: 75px;
         min-width: 232px;
-        min-height: 745px;
+        min-height: 747px;
         background: $white-color;
-        border: 1px solid blue;
+        border: none;
         padding: 17px 17px 0 34px;
     }
     
     &__navigation_close {
         margin: 0 0 0 210px;
         background: transparent;
-    }
+        fill: $graytext-color;
+
+        &:hover {
+            fill: $pink-color;
+            cursor: pointer;
+        }
+        }
+
     &__navigation_heading {
         @include font(14px,17px,700);
         color: $darkblack-color;
@@ -68,11 +85,29 @@
         margin: 24px 0 12px 0;
     }
 
-    &__navigation_list a {
+    &__navigation_heading_link {
+        text-decoration: none;
+    }
+
+    &__navigation_link {
         text-decoration: none;
         @include font(14px,17px,400);
         color: $graytext-color;
         margin: 0 0 11px 22px;
         display: block;
+    }
+
+    &__navigation_link:hover {
+        color: $pink-color;
+    }
+
+    &__navigation_heading_link:hover &__navigation_list_heading {
+        color: $graytext-color;
+    }
+
+    &__mobile_hide {
+        @include mobile {
+            display: none;
+        }
     }
 }

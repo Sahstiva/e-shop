@@ -1,10 +1,20 @@
 .subscribe {
-    background: rgba(244, 244, 244, 0.7);
-
+    background: url("../img/subscribe_background.png"),rgba(244, 244, 244, 0.7);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-blend-mode: color;
+    
     &__list {
         display: flex;
         justify-content: space-around;
         padding: 100px 0 125px 0;
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            padding: 54px 0 140px 0;
+        }
     }
 
     &__list_item {
@@ -12,12 +22,20 @@
         flex-direction: column;
         align-items: center;
         max-width: 360px;
+
+        @include mobile {
+            max-width: 343px;
+        }
     }
 
     &__list_item_text, &__list_item_italic {
         @include font(20px,24px,400);
         text-align: center;
         color: $black-color;
+
+        @include mobile {
+            @include font(18px,21.6px,400);
+        }
     }
     &__list_item_italic {
         font-style: italic;
@@ -32,10 +50,18 @@
         text-transform: uppercase;
         color: $black-color;
         margin: 50px 0 0 0;
+
+        @include mobile {
+            @include font(24px,36.77px,700);
+        }
     }
     &__list_item_subheading {
         @include font(18px,30px,400);
         margin: 0 0 32px 0;
+
+        @include mobile {
+            @include font(14px,21.45px,400);
+        }
     }
 
     &__list_item_input {
@@ -49,6 +75,10 @@
         opacity: 0.67;
         padding: 7px 22px 7px 22px;
         text-transform: capitalize;
+
+        @include mobile {
+            width: 205px;
+        }
     }
     &__list_item_button {
         height: 49px;
@@ -60,6 +90,10 @@
         text-transform: capitalize;
         border: 0;
         border-radius: 0 25px 25px 0;
+
+        @include mobile {
+            width: 95px;
+        }
     }
     &__list_input_wrapper {
         display: flex;

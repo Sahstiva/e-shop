@@ -21,15 +21,21 @@ body {
 .container {
     width: 1140px;
     margin: 0 auto;  
+
+    @include tablet {
+        width: 95.7%;
+    }
 }
 
-.debuglist {
-    display: flex;
-    justify-content: start;
-    margin: 20px 100px 20px 100px;
+.main {
+    position: relative;
+}
 
-    &__link {
-        margin: 0 20px 0 20px;
-    }
-
+.section__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    display: none;
 }
