@@ -28,27 +28,47 @@
         }
     }
 
-    &__list_social_img, &__list_instagram_img {
-        background: transparent;
+    &__list_instagram_icon {
+        font-size: 20px;
+        color: $white-color;
     }
 
-    &__list_social_item, &__list_instagram_item {
+    &__list_social_icon {
+        font-size: 20px;
+        color: $black-color;
+    }
+
+    &__list_social_item {
         width: 32px;
         height: 32px;
         background-color: $white-color;
         @include flex-center;
         margin: 0 4px 0 4px;
-    }
 
-    &__list_social_item:hover {
-        background-color: $pink-color;
-    }
+        &:hover {
+            background-color: $pink-color;
+        }
+    
+        &:hover .copyright__list_social_icon {
+            color: $white-color;
+        }
+        }
 
     &__list_instagram_item {
+        width: 32px;
+        height: 32px;
         background-color: $pink-color;
-    }
-    &__list_instagram_item:hover {
-        background-color: $white-color;
+        @include flex-center;
+        margin: 0 4px 0 4px;
+
+        &:hover {
+            background-color: $white-color;
+        }
+
+        &:hover .copyright__list_instagram_icon {
+            color: $black-color;
+        }
+
     }
 
 }

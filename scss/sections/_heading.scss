@@ -3,10 +3,53 @@
     background: $pinkbg-color;
     min-height: 148px;
     @include flex-center-space-between;
+    
+    &__wrapper {
+        @include flex-center-space-between;
+
+        @include mobileL {
+            flex-direction: column;
+            justify-content: start;
+        }
+    }
 
     &__heading {
         @include font(24px,29px,400);
         text-transform: uppercase;
         color: $pink-color;
-    }    
+
+        @include mobileL {
+            @include flex-center;
+        }
+    
+    }
+
+    // Стилизация навигации на bootstrap
+
+    &__menu {
+        margin-top: 32px;
+    }
+    
+    &__nav-link {
+        text-transform: uppercase;
+        color: $lightgraytext-color;
+        padding: .5rem .2rem .5rem 0;
+    }
+    
+    &__active {
+        color: $pink-color;
+    }
+    
+    &__nav-link:hover {
+        color: $pink-color;
+    }
+    
+    &__nav-link::before {
+        content: " / ";
+    }
+    
+    &__nav-link-first::before {
+        content: "";
+    }
+    
 }

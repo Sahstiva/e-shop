@@ -1,7 +1,13 @@
 @import './variables';
+@import './fonts';
 @import './reset';
 @import './mixins';
 @import './common';
+
+@import './fontawesome/fontawesome.scss';
+@import './fontawesome/brands.scss';
+@import './fontawesome/solid.scss';
+
 
 @import './sections/header';
 @import './sections/intro';
@@ -13,3 +19,4 @@
 @import './sections/heading';
 @import './sections/registration';
 @import './sections/cart';
+@import './sections/product';
