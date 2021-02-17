@@ -28,14 +28,10 @@
         }
     }
 
-    &__list_instagram_icon {
-        font-size: 20px;
-        color: $white-color;
-    }
-
     &__list_social_icon {
         font-size: 20px;
         color: $black-color;
+        transition: color 400ms;
     }
 
     &__list_social_item {
@@ -44,6 +40,7 @@
         background-color: $white-color;
         @include flex-center;
         margin: 0 4px 0 4px;
+        transition: background-color 400ms;
 
         &:hover {
             background-color: $pink-color;
@@ -51,24 +48,13 @@
     
         &:hover .copyright__list_social_icon {
             color: $white-color;
+            animation: loader 2s infinite linear;
         }
-        }
-
-    &__list_instagram_item {
-        width: 32px;
-        height: 32px;
-        background-color: $pink-color;
-        @include flex-center;
-        margin: 0 4px 0 4px;
-
-        &:hover {
-            background-color: $white-color;
-        }
-
-        &:hover .copyright__list_instagram_icon {
-            color: $black-color;
-        }
-
     }
 
 }
+
+@keyframes loader {
+    0% {transform:rotate(0deg)}
+    50%{transform:rotate(180deg)}
+    100%{transform:rotate(360deg)}}

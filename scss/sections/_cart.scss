@@ -17,7 +17,7 @@
     }
 
     &__list_item {
-        width: 652px;
+        width: 100%;
         max-height: 306px;
         filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
         display: flex;
@@ -34,11 +34,16 @@
         content: url("../img/cross.svg");
         top: 20px;
         right: 20px;
+
+        @include mobileL {
+            top: 13px;
+            right: 13px;
+        }
     }
     &__list_item_wrapper {
         display: flex;
         flex-direction: column;
-        width: 390px;
+        width: 60%;
         padding: 22px 30px 0 30px;
         background-color: $white-color;
         position: relative;
@@ -91,9 +96,27 @@
     }
 
     &__list_item_qty {
-        width: 23px;
-        height: 14px;
+        width: 29px;
+        height: 18px;
         margin: 0 0 4px 25px;
+        border: 1px solid $grayicons-color;
+        padding: 0 0 0 8px;
+        ::-webkit-input-placeholder {
+            color: $lightgraytext-color;
+            @include font(10px,12px);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
+        :-ms-input-placeholder {
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
+          :-moz-placeholder { /* Firefox 18- */
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
     }
 
     &__list_buttons {
@@ -111,6 +134,8 @@
         @include font(14px,17px);
         text-transform: uppercase;
         background-color: $white-color;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
 
         @include mobileL {
             width: 174px;
@@ -191,6 +216,9 @@
         @include font(11px,13px);
         background-color: $white-color;
         border: 1px solid $grayborder-color;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
+
     }
 
     &__shipping_button:hover {
@@ -260,6 +288,8 @@
         text-transform: uppercase;
         margin: 17px 0 0 0;
         border: none;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
     }
 
     &__total_checkout:hover {

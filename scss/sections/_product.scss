@@ -1,15 +1,20 @@
 .product {
-    background-color: $white-color;
+//    background-color: $white-color;
 
     &__slider_wrapper {
-        background: $grayproduct-color;
-        @include flex-center;
+//        background: $grayproduct-color;
         min-height: 777px;
+        @include flex-center;
+        z-index: -2;
 
         @include tablet {
             min-height: 624px;
         }
 
+    }
+
+    &__carousel {
+        z-index: -1;
     }
 
     &__carousel-item {
@@ -71,7 +76,7 @@
         overflow: visible;
         z-index: 1;
         border: 1px solid $grayline-color;
-//        margin-top: -65px;
+        margin-top: -65px;
 }
 
     &__chapter {
