@@ -1,0 +1,208 @@
+.filter {
+    display: flex;
+    justify-content: start;
+    min-height: 132px;
+    align-items: center;
+    position: relative;
+
+    @include tablet {
+        min-height: 81px;
+    }
+
+    &__wrapper {
+        width: 100%;
+        @include flex-center;
+
+        @include laptop {
+            justify-content: flex-end;
+        }
+    }
+
+    &__list {
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__item,
+    &__menu,
+    &__item-arrow {
+        @include font(14px, 17px, 600);
+        color: $graytext-color;
+        text-transform: uppercase;
+        @include flex-center;
+    }
+
+    &__item:hover,
+    &__menu:hover,
+    &__item-arrow:hover {
+        color: $pink-color;
+        cursor: pointer;
+    }
+
+    &__menu:hover &__menu-icon {
+        fill: $pink-color;
+    }
+
+    &__menu-icon:hover {
+        fill: $pink-color;
+    }
+
+    &__menu {
+        border: none;
+        background-color: transparent;
+
+        @include mobileL {
+            display: none;
+        }
+    }
+
+    &__menu-icon {
+        fill: $graytext-color;
+        margin: 0 0 0 11px;
+
+        @include mobileL {
+            width: 37.5px;
+            height: 25px;
+        }
+    }
+
+    &__heading {
+        color: $black-color;
+    }
+
+    &__item-icon,
+    &__item-arrow {
+        fill: $black-color;
+        margin: 0 0 0 11px;
+    }
+
+    &__nav {
+        position: absolute;
+        top: 39px;
+        left: 0px;
+        width: 360px;
+        min-height: 531px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        z-index: 1;
+        background-color: $white-color;
+        display: none;
+
+        @include tablet {
+            left: -7px;
+            top: 20px;
+        }
+
+        @include mobileL {
+            left: 0px;
+        }
+
+        &-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 13px 0 0 16px;
+        }
+
+        &-active {
+            color: $pink-color;
+            fill: $pink-color;
+            // margin: 13px 0 0 16px;
+        }
+
+        &-icon {
+            fill: $pink-color;
+            margin: 0 0 0 11px;
+        }
+
+        &-category {
+            margin: 24px 0 0 33px;
+        }
+
+        &-category li {
+            margin: 28px 0 0 33px;
+        }
+
+        &-item {
+            color: $pink-color;
+            @include font(14px, 37px, 600);
+            text-transform: uppercase;
+            height: 37px;
+            width: 90%;
+            border-bottom: 1px solid $grayicons-color;
+            margin: 18px 0 0 0;
+            position: relative;
+            text-decoration: none;
+        }
+
+        &-heading:hover {
+            cursor: pointer;
+            ;
+        }
+
+        &-heading::before {
+            width: 5px;
+            height: 37px;
+            background: $pink-color;
+            display: block;
+            content: " ";
+            position: absolute;
+            left: -11px;
+        }
+
+        &-subcategory,
+        &-brand,
+        &-designer {
+            display: none;
+        }
+
+        &-subcategory li,
+        &-brand li,
+        &-designer li {
+            margin: 11px 0 0 0;
+        }
+
+        &-subitem {
+            @include font(14px, 17px);
+            color: $graytext-color;
+            text-decoration: none;
+        }
+
+        &-subitem:hover {
+            color: $pink-color;
+            cursor: pointer;
+        }
+
+    }
+
+    &__item-size {
+        position: relative;
+    }
+
+    &__size {
+        width: 79px;
+        min-height: 103px;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        position: absolute;
+        top: 22px;
+        left: 0px;
+        background: $white-color;
+        z-index: 2;
+        display: none;
+
+        &-list {
+            margin: 7px 0 0 0;
+        }
+
+        &-checkbox {
+            margin: 0 9.5px 9.5px 9.5px;
+        }
+
+        &-item {
+            @include font(14px, 16px);
+            color: $graytext-color;
+            text-transform: uppercase;
+        }
+    }
+}
