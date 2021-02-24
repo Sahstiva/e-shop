@@ -1,0 +1,191 @@
+.product {
+//    background-color: $white-color;
+
+    &__slider_wrapper {
+//        background: $grayproduct-color;
+        min-height: 777px;
+        @include flex-center;
+        z-index: -2;
+
+        @include tablet {
+            min-height: 624px;
+        }
+
+    }
+
+    &__carousel {
+        z-index: -1;
+    }
+
+    &__carousel-item {
+        max-height: 777px;
+        max-width: 1600px;
+    }
+
+    &__carousel_img_1 {
+        @include tablet {
+            content: url("../img/slider_girl_in_white_tshirt_tablet.png");
+        }
+        @include mobileL {
+            content: url("../img/slider_girl_in_white_tshirt_mobile.png");
+        }
+    }
+
+    &__carousel_img_2 {
+        @include tablet {
+            content: url("../img/slider_girl_in_white_tshirt_tablet.png");
+        }
+        @include mobileL {
+            content: url("../img/slider_girl_in_white_tshirt_mobile.png");
+        }
+    }
+
+    &__carousel_img_3 {
+        @include tablet {
+            content: url("../img/slider_girl_in_white_tshirt_tablet.png");
+        }
+        @include mobileL {
+            content: url("../img/slider_girl_in_white_tshirt_mobile.png");
+        }
+    }
+
+    &__carousel_icon {
+        background-image: none;
+    }
+
+    &__icon {
+        color: $darkgray-color;
+        font-size: 21px;
+        background-color: $lightgraytext-color;
+        width: 47px;
+        height: 47px;
+        padding: 12px 17px 12px 17px;
+    }
+    
+    &__icon:hover {
+        color: $pink-color;
+    }
+
+    &__desciption {
+        height: 600px;
+        background: $white-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 65px 0 65px 0;
+        overflow: visible;
+        z-index: 1;
+        border: 1px solid $grayline-color;
+        margin-top: -65px;
+}
+
+    &__chapter {
+        @include font (14px,17px);
+        color: $pink-color;
+        text-transform: uppercase;
+    }
+
+    &__heading_divider {
+        height: 3px;
+        width: 60px;
+        background: $pink-color;
+        border: none;
+        margin: 12px 0 0 0;
+    }
+
+    &__heading {
+        @include font(18px,22px);
+        color: $lightgray-color;
+        margin: 12px 0 0 0;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        color: $graytext-color;
+        @include font(14px,17px);
+        margin: 48px 0 0 0;
+        text-align: center;
+        max-width: 555px;
+
+        @include mobileL {
+            margin: 32px 0 0 0;
+            width: 86%;
+        }
+    }
+
+    &__price {
+        @include font(24px,29px);
+        color: $pink-color;
+        margin: 32px 0 0 0;
+    }
+
+    &__divider {
+        background-color: $lightgraytext-color;
+        margin: 65px 250px 0 250px;
+        min-height: 1px;
+        min-width: 641px;
+
+        @include tablet {
+            min-width: 89%;
+        }
+        @include mobileL {
+            min-width: 43%;
+        }
+    }
+
+    &__menu {
+        margin: 65px 0 0 0;
+    }
+    
+    &__addtocart {
+        border: 1px solid $pink-color;
+        @include flex-center;
+        min-width: 211px;
+        min-height: 47px;
+        background: transparent;
+        margin: 49px 0 0 0;
+    }
+
+    &__addtocart_btnimg {
+        fill: $pink-color;
+        background: transparent;
+    }
+
+    &__addtocart_btntxt {
+        @include font(14px,17px,400);
+        margin: 0 0 0 23px;
+        color: $pink-color;
+    }
+
+    &__addtocart:hover {
+        color: $white-color;
+        background-color: $pink-color;
+    }
+
+    &__addtocart:hover &__addtocart_btnimg {
+        fill: $white-color;
+    }
+
+    &__addtocart:hover &__addtocart_btntxt {
+        color: $white-color;
+    }
+
+    &__nav-link {
+        @include font(14px,17px);
+        text-transform: uppercase;
+        color: $lightgraytext-color;
+
+        @include mobileL {
+            @include font(12px,10px);
+        }
+    }
+
+    &__dropdown-item {
+        @include font(14px,17px);
+        text-transform: uppercase;
+        color: $lightgraytext-color;
+        @include mobileL {
+            @include font(12px,10px);
+        }
+    }
+}

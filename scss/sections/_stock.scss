@@ -4,26 +4,30 @@
         @include flex-center-space-between;
         flex-wrap: wrap;
         padding: 65px 0 0 0;
+        max-width: 1140px;
 
         @include tablet {
             padding: 20px 0 0 0;
         }
 
-        @include mobile {
+        @include mobileL {
             justify-content: center;
         }
     }
 
     &__item {
-        width: 31.6%;
+        width: 32%;
         min-height: 260px;
         background-blend-mode: overlay;
-        display: flex;
+        @include flex-center;
         flex-direction: column;
-        justify-content: center;
 
-        @include mobile {
-            width: 91.7%;
+        @include tablet {
+            min-height: 168px;
+        }
+
+        @include mobileL {
+            width: 100%;
             margin: 32px 0 0 0;
         }
     }
@@ -45,14 +49,17 @@
 
     &__item_woman {
         background: url("../img/img_item_woman.jpg"), rgba(33, 22, 22, 0.7);
+        @include background-cover;
     }
 
     &__item_man {
         background: url("../img/img_item_man.jpg"), rgba(33, 22, 22, 0.7);
+        @include background-cover;
     }
 
     &__item_kids {
         background: url("../img/img_item_kid.jpg"), rgba(33, 22, 22, 0.7);
+        @include background-cover;
     }
 
     &__item_accessoires {
@@ -60,9 +67,10 @@
         width: 100%;
         min-height: 180px;
         margin: 30px 0 0 0;
+        @include background-cover;
 
-        @include mobile {
-            width: 91.7%;
+        @include mobileL {
+            width: 100%;
             margin: 32px 0 0 0;
             min-height: 111px;
         }

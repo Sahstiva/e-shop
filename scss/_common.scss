@@ -19,11 +19,13 @@ body {
 }
 
 .container {
-    width: 1140px;
+    width: 71.3%;
     margin: 0 auto;  
 
     @include tablet {
-        width: 95.7%;
+        width: 96%;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 
@@ -38,4 +40,10 @@ body {
     position: absolute;
     top: 0;
     display: none;
+}
+
+.mobile_hide {
+    @include mobileL {
+        display: none;
+    }
 }

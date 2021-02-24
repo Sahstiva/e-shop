@@ -18,10 +18,40 @@
 
     &__search {
         display: none;
-    }
+        width: 340px;
+        min-height: 44px;
+        border: 1px solid #A4A4A4;
+        margin: 0 0 0 20px;
+        padding: 0 0 0 17px;
+        text-transform: capitalize;
+        ::-webkit-input-placeholder {
+            color: $lightgraytext-color;
+            @include font(13px,16px);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+        :-ms-input-placeholder {
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+
+        &:focus {
+            display: block;
+        }
+    }        
 
     &__list {
         display: flex;
+
+        @include mobileL {
+            flex-direction: row-reverse;
+        }
     }
 
     &__icon {
@@ -42,11 +72,14 @@
             fill: $pink-color;
             cursor: pointer;
         }
-
     }
 
     &__search_button {
         margin: 0;
+
+        &:hover .header__search {
+            display: block;
+        }
     }
 
     &__navigation {

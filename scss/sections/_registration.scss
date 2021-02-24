@@ -3,25 +3,44 @@
     &__content_wrapper {
         padding: 30px 0 96px 0;
         @include flex-center-space-between;
+        align-items: start;
+
+        @include mobileL {
+            flex-direction: column;
+            align-items: center;
+
+        }
     }
 
     &__form {
         display: flex;
         flex-direction: column;
-    } 
+        width: 360px;
+
+    }
     
     &__fieldset {
         margin: 34px 0 0 0;
+
+        @include mobileL {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__form_name_legend {
         @include font(16px,19px);
         color: $black-color;
         text-transform: capitalize;
+
+        @include mobileL {
+            padding: 0 0 0 10px;
+        }
     }
 
     &__form_input {
-        max-width: 360px;
+        width: 340px;
         min-height: 44px;
         border: 1px solid #A4A4A4;
         margin: 20px 0 0 0;
@@ -48,11 +67,15 @@
     &__fieldset_radio {
         display: flex;
         justify-content: start;
+        @include mobileL {
+            padding: 0 0 0 10px;
+        }
     }
 
     &__form_radio {
         margin: 33px 20px 0 0;
         display: none;
+
     }
     &__form_gender {
         @include font(11px,13px);
@@ -74,18 +97,25 @@
     }
 
     &__form_login_legend {
-        // margin: 34px 0 0 0;
         @include font(16px,19px);
         color: $black-color;
         text-transform: capitalize;
+
+        @include mobileL {
+            padding: 0 0 0 10px;
+        }
     }
 
     &__form_text {
         @include font(13px,16px);
         color: $lightgraytext-color;
         margin: 15px 0 0 0;
-        display: block;
+        display: block;        
         max-width: 360px;
+
+        @include mobileL {
+            padding: 0 0 0 10px;
+        }
     }
 
     &__form_submit {
@@ -99,7 +129,18 @@
         position: relative;
         text-align: left;
         padding: 0 0 0 30px;
+
+        @include mobileL {
+            margin: 40px 0 0 10px;
+        }
+
+        &:hover {
+            color: $pink-color;
+            background: $white-color;
+            border: 1px solid $pink-color;
+        }
     }
+
 
     &__form_submit::after {
         content: url("../img/arrow.svg");
@@ -107,10 +148,29 @@
         right: 30px;
     }
 
+    &__text {
+            max-width: 35%;
+            @include mobileL {
+                max-width: 90%;
+                padding: 0 0 0 10px;
+            }
+
+            @include mobile {
+                padding: 0;
+            }
+    }
     &__text_heading {
         @include font(24px,29px);
         color: $darkblack-color;
         text-transform: uppercase;
+        padding: 34px 0 0 0;
+
+        @include laptop {
+            @include font(18px,22px);
+        }
+        @include tablet {
+            @include font(16px,19px);
+        }
     }
 
     &__text_subheading {
@@ -119,6 +179,14 @@
         margin: 22px 0 0 0;
         display: block;
         max-width: 650px;
+
+        @include laptop {
+            @include font(18px,22px);
+        }
+        @include tablet {
+            @include font(16px,19px);
+            max-width: 355px;
+        }
     }
 
     &__list {
@@ -130,6 +198,13 @@
         color: $darkblack-color;
         margin: 16px 0 0 43px;
         position: relative;
+
+        @include laptop {
+            @include font(18px,22px);
+        }
+        @include tablet {
+            @include font(16px,19px);
+        }
     }
 
     &__list_item::before {
@@ -139,4 +214,3 @@
     }
 
 }
-

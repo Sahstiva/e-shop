@@ -2,6 +2,7 @@ const menuButton = document.querySelector('#menu_button');
 const navMenu = document.querySelector('.header__navigation');
 const menuClose = document.querySelector('.header__navigation_close');
 const sectionOverlay = document.querySelector('.section__overlay');
+
 navMenu.style.display = "none";
 
 menuButton.addEventListener("click", function () {
@@ -10,7 +11,7 @@ menuButton.addEventListener("click", function () {
         if (sectionOverlay)
             sectionOverlay.style.display = "block";
         navMenu.style.display = "block";
-        navMenu.style.zIndex = "9999";
+        navMenu.style.zIndex = "1";
     }
     else {
         navMenu.style.display = "none";

@@ -1,24 +1,40 @@
 .intro {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flex-center;
     background-color: $lightpink-color;
     
     &__heading_wrapper {
-        width: 50%;
+        width: 800px;
         display: flex;
         justify-content: start;
+        align-items: center;
         padding: 0 0 0 40px;
 
-        @include mobile {
+        @include desktop {
+            width: 100%;
+        }
+
+        @include laptop {
+            padding: 0;
+        }
+        @include mobileL {
             width: 100%;
             min-height: 363px;
-            align-items: center;
+            justify-content: center;
         }
     }
 
     &__img {
-        @include mobile {
+        width: 800px;
+        height: auto;
+
+        @include desktop {
+            width: 50%;
+        }
+
+        @include tablet {
+            width: 50%;
+        }
+        @include mobileL {
             display: none;
         }
     }
@@ -26,11 +42,11 @@
     &__heading_verticalbox {
         background: $pink-color;
         min-width: 12px;
-        min-height: 92px;
+        height: 96px;
         margin: 0 16px 0 0;
 
-        @include mobile {
-            min-height: 61px;
+        @include mobileL {
+            height: 61px;
         }
     }
 
@@ -38,8 +54,16 @@
         @include font(48px,58px,900);
         text-transform: uppercase;
 
-        @include tablet {
+        @include desktop {
+            @include font(48px,58px,900);        
+        }
+
+        @include laptop {
             @include font (44px,52.8px,900);
+        }
+
+        @include mobileL {
+            @include font(38px,45.6px,900);
         }
 
         @include mobile {
@@ -51,8 +75,12 @@
         @include font(37px,44px,700);
         display: block;
 
-        @include tablet {
+        @include laptop {
             @include font(24px,28.8px,700);
+        }
+
+        @include mobileL {
+            @include font(20px,24px,700);
         }
 
         @include mobile {

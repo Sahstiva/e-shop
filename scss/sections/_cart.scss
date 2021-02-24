@@ -2,7 +2,10 @@
 
     &__wrapper {
         display: flex;
-        justify-content: space-between;    
+        justify-content: space-between;
+        @include laptop {
+            flex-direction: column;
+        }    
     }
 
     &__list {
@@ -14,11 +17,16 @@
     }
 
     &__list_item {
-        width: 652px;
+        width: 100%;
         max-height: 306px;
         filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
         display: flex;
         margin: 0 0 40px 0;
+
+        @include mobileL {
+            width: 100%;
+            max-height: 188px;
+        }
     }
 
     &__list_item_wrapper::after {
@@ -26,14 +34,24 @@
         content: url("../img/cross.svg");
         top: 20px;
         right: 20px;
+
+        @include mobileL {
+            top: 13px;
+            right: 13px;
+        }
     }
     &__list_item_wrapper {
         display: flex;
         flex-direction: column;
-        width: 390px;
+        width: 60%;
         padding: 22px 30px 0 30px;
         background-color: $white-color;
         position: relative;
+
+        @include mobileL {
+            padding: 13px 17px 0 17px;
+            width: 60%;
+        }
     }
 
     &__list_item_qty_wrapper {
@@ -41,6 +59,11 @@
         flex-direction: row;
         align-items: center;
         justify-content: start;
+
+        @include mobileL {
+            margin: 0 0 28px 0;
+        }
+
     }
 
     &__list_item_heading {
@@ -50,12 +73,22 @@
         max-width: 200px;
         flex-wrap: wrap;
         margin: 0 0 42px 0;
+
+        @include mobileL {
+            @include font(16px,19px,400);
+            margin: 0 0 25px 0;
+        }
     }
 
     &__list_item_text {
         @include font(22px,26px,400);
         color: $darkgray-color;
         margin: 0 0 6px 0;
+
+        @include mobileL {
+            @include font(14px,17px,400);
+            margin: 0 0 4px 0;
+        }
     }
 
     &__list_item_pink {
@@ -63,9 +96,27 @@
     }
 
     &__list_item_qty {
-        width: 44px;
-        height: 25px;
-        margin: 0 0 0 25px;
+        width: 29px;
+        height: 18px;
+        margin: 0 0 4px 25px;
+        border: 1px solid $grayicons-color;
+        padding: 0 0 0 8px;
+        ::-webkit-input-placeholder {
+            color: $lightgraytext-color;
+            @include font(10px,12px);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
+        :-ms-input-placeholder {
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
+          :-moz-placeholder { /* Firefox 18- */
+            color: $lightgraytext-color; 
+            @include font(10px,12px); 
+        }
     }
 
     &__list_buttons {
@@ -83,6 +134,14 @@
         @include font(14px,17px);
         text-transform: uppercase;
         background-color: $white-color;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
+
+        @include mobileL {
+            width: 174px;
+            height: 32px;
+            @include font(12px,14px);
+        }
     }
 
     &__list_button:hover {
@@ -90,10 +149,29 @@
         color: $white-color;
     }
 
-    &__shipping {
-        margin: 96px 0 0 130px;
+    &__shipping_wrapper {
+        margin: 96px 0 0 0;
         display: flex;
         flex-direction: column;
+
+        @include laptop {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0 96px 0;
+        }
+
+        @include mobileL {
+            flex-direction: column;
+        }
+    }
+
+    &__shipping {
+        width: 360px;
+
+        @include mobileL {
+            width: 100%;
+        }
     }
 
     &__shipping_heading {
@@ -104,9 +182,30 @@
     }
 
     &__shipping_input {
-        width: 360px;
+        width: 340px;
         height: 45px;
         margin: 0 0 20px 0;
+        padding: 0 0 0 17px;
+        ::-webkit-input-placeholder {
+            color: $lightgraytext-color;
+            @include font(13px,16px);
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+        :-ms-input-placeholder {
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+          :-moz-placeholder { /* Firefox 18- */
+            color: $lightgraytext-color; 
+            @include font(13px,16px); 
+        }
+
+        @include mobileL {
+            width: 100%;
+        }
     }
 
     &__shipping_button {
@@ -117,6 +216,14 @@
         @include font(11px,13px);
         background-color: $white-color;
         border: 1px solid $grayborder-color;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
+
+    }
+
+    &__shipping_button:hover {
+        background: $grayborder-color;
+        color: $white-color;
     }
 
     &__total {
@@ -126,6 +233,18 @@
         margin: 57px 0 0 0;
         display: flex;
         flex-direction: column;
+
+        @include laptop {
+            margin: 20px 0 0 0;;
+        }
+        @include tablet {
+            margin: 25px 0 0 0;
+        }
+
+        @include mobileL {
+            margin: 48px 0 0 0;
+            width: 100%;
+        }
     }
 
     &__total_text_wrapper {
@@ -169,6 +288,8 @@
         text-transform: uppercase;
         margin: 17px 0 0 0;
         border: none;
+        transition-property: background-color, color, border;
+        transition-duration: 300ms;
     }
 
     &__total_checkout:hover {
