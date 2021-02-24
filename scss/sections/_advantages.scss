@@ -22,37 +22,38 @@
             align-items: center;
             padding: 48px 0 48px 0;
         }
-    }
 
-    &__list_item {
-        max-width: 360px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        &-item {
+            max-width: 360px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        @include tablet {
-            margin: 0 0 48px 0;
+            @include tablet {
+                margin: 0 0 48px 0;
+            }
+
+            @include mobile {
+                margin: 0 0 46px 0;
+            }
         }
 
-        @include mobile {
-            margin: 0 0 46px 0;
+        &-heading {
+            @include font(20px, 24px, 400);
+            color: $lightergray-color;
+            margin: 28px 0 16px 0;
         }
-    }
 
-    &__item_heading {
-        @include font(20px,24px,400);
-        color: $lightergray-color;
-        margin: 28px 0 16px 0;
-    }
+        &-text {
+            @include font(14px, 17px);
+            color: $lightergray-color;
+            text-align: center;
+        }
 
-    &__item_text {
-        @include font(14px,17px);
-        color: $lightergray-color;
-        text-align: center;
-    }
+        &-item-img {
+            background: transparent;
+            min-height: 40px;
+        }
 
-    &__item_img {
-        background: transparent;
-        min-height: 40px;
     }
 }

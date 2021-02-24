@@ -20,7 +20,13 @@ body {
 
 .container {
     width: 71.3%;
-    margin: 0 auto;  
+    margin: 0 auto;
+
+    @include laptopL {
+        width: 80%;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
     @include tablet {
         width: 96%;
@@ -33,7 +39,7 @@ body {
     position: relative;
 }
 
-.section__overlay {
+.main__overlay {
     width: 100%;
     height: 100%;
     background: rgba(58, 56, 56, 0.86);
