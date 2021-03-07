@@ -3,18 +3,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1140px;
 
     @include mobileL {
         padding: 64px 0 0 0;
     }
 
     &__heading {
-        @include font(30px,36px,400);
-        color: $black-color;        
+        @include font(30px, 36px, 400);
+        color: $black-color;
     }
 
     &__text {
-        @include font(14px,17px,400);
+        @include font(14px, 17px, 400);
         color: $gray-color;
         margin: 0 0 48px 0;
     }
@@ -25,7 +26,6 @@
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-//        padding: 48px 0 0 0;
         width: 100%;
         max-width: 1140px;
 
@@ -45,20 +45,20 @@
     }
 
     &__item_heading {
-        @include font(13px,16px,400);
+        @include font(13px, 16px, 400);
         color: $darkblack-color;
         text-transform: uppercase;
         margin: 25px 18px 12px 18px;
     }
 
     &__item_text {
-        @include font(14px,17px,400);
+        @include font(14px, 17px, 400);
         color: $lightgray-color;
         margin: 0 18px 0 18px;
     }
 
     &__item_price {
-        @include font(16px,19px,400);
+        @include font(16px, 19px, 400);
         color: $pink-color;
         margin: 18px 18px 20px 18px;
     }
@@ -101,11 +101,11 @@
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 
     &__item_btntxt {
-        @include font(14px,17px,400);
+        @include font(14px, 17px, 400);
         color: $white-color;
     }
 
@@ -114,8 +114,12 @@
         background-color: $pink-color;
     }
 
+    &__link {
+        text-decoration: none;
+    }
+
     &__button {
-        @include font(16px,19px,400);
+        @include font(16px, 19px, 400);
         padding: 14px 38px;
         border: 1px solid $pink-border-color;
         margin: 48px 0 0 0;

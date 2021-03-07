@@ -1,11 +1,21 @@
 .cart {
 
+    display: flex;
+    justify-content: space-between;
+
+    @include laptop {
+        flex-direction: column;
+    }
+
     &__wrapper {
         display: flex;
-        justify-content: space-between;
-        @include laptop {
-            flex-direction: column;
-        }    
+        flex-direction: column;
+        align-items: center;
+        padding: 96px 0 128px 0;
+
+        @include tablet {
+            padding: 58px 0 64px 0;
+        }
     }
 
     &__list {
@@ -13,141 +23,178 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 96px 0 0 0;
-    }
 
-    &__list_item {
-        width: 100%;
-        max-height: 306px;
-        filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
-        display: flex;
-        margin: 0 0 40px 0;
-
-        @include mobileL {
+        &-item {
             width: 100%;
-            max-height: 188px;
-        }
-    }
+            max-height: 306px;
+            filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+            display: flex;
+            margin: 0 0 40px 0;
 
-    &__list_item_wrapper::after {
-        position: absolute;
-        content: url("../img/cross.svg");
-        top: 20px;
-        right: 20px;
-
-        @include mobileL {
-            top: 13px;
-            right: 13px;
-        }
-    }
-    &__list_item_wrapper {
-        display: flex;
-        flex-direction: column;
-        width: 60%;
-        padding: 22px 30px 0 30px;
-        background-color: $white-color;
-        position: relative;
-
-        @include mobileL {
-            padding: 13px 17px 0 17px;
-            width: 60%;
-        }
-    }
-
-    &__list_item_qty_wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: start;
-
-        @include mobileL {
-            margin: 0 0 28px 0;
+            @include mobileL {
+                width: 100%;
+                max-height: 188px;
+                justify-content: center;
+            }
         }
 
-    }
-
-    &__list_item_heading {
-        @include font(24px,29px,400);
-        text-transform: uppercase;
-        color: $black-color;
-        max-width: 200px;
-        flex-wrap: wrap;
-        margin: 0 0 42px 0;
-
-        @include mobileL {
-            @include font(16px,19px,400);
-            margin: 0 0 25px 0;
+        &-img {
+            @include mobileL {
+                width: 40%;
+                height: 100%;
+            }
         }
-    }
 
-    &__list_item_text {
-        @include font(22px,26px,400);
-        color: $darkgray-color;
-        margin: 0 0 6px 0;
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 390px;
+            min-height: 306px;
+            padding: 22px 30px 0 30px;
+            background-color: $white-color;
+            position: relative;
 
-        @include mobileL {
-            @include font(14px,17px,400);
-            margin: 0 0 4px 0;
+            @include tablet {
+                width: 472px;
+                min-height: 306px;
+            }
+
+            @include mobileL {
+                padding: 13px 17px 0 17px;
+                max-width: 214px;
+                min-height: 168px;
+            }
         }
-    }
 
-    &__list_item_pink {
-        color: $pink-color;
-    }
+        &-wrapper::after {
+            position: absolute;
+            content: url("../img/cross.svg");
+            top: 20px;
+            right: 20px;
 
-    &__list_item_qty {
-        width: 29px;
-        height: 18px;
-        margin: 0 0 4px 25px;
-        border: 1px solid $grayicons-color;
-        padding: 0 0 0 8px;
-        ::-webkit-input-placeholder {
-            color: $lightgraytext-color;
-            @include font(10px,12px);
+            @include mobileL {
+                top: 13px;
+                right: 13px;
+            }
         }
-        ::-moz-placeholder { /* Firefox 19+ */
-            color: $lightgraytext-color; 
-            @include font(10px,12px); 
+
+        &-heading {
+            @include font(24px, 29px, 400);
+            text-transform: uppercase;
+            color: $black-color;
+            max-width: 200px;
+            flex-wrap: wrap;
+            margin: 0 0 42px 0;
+
+            @include mobileL {
+                @include font(16px, 19px, 400);
+                margin: 0 0 25px 0;
+                max-width: 140px;
+            }
         }
-        :-ms-input-placeholder {
-            color: $lightgraytext-color; 
-            @include font(10px,12px); 
+
+        &-text {
+            @include font(22px, 26px, 400);
+            color: $darkgray-color;
+            margin: 0 0 6px 0;
+
+            @include mobileL {
+                @include font(14px, 17px, 400);
+                margin: 0 0 4px 0;
+            }
         }
-          :-moz-placeholder { /* Firefox 18- */
-            color: $lightgraytext-color; 
-            @include font(10px,12px); 
+
+        &-pink {
+            color: $pink-color;
         }
+
+        &-subwrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: start;
+
+            @include mobileL {
+                margin: 0 0 0 0;
+            }
+        }
+
+        &-qty {
+            width: 29px;
+            height: 18px;
+            margin: 0 0 4px 25px;
+            border: 1px solid $grayicons-color;
+            padding: 0 0 0 8px;
+
+            ::-webkit-input-placeholder {
+                color: $lightgraytext-color;
+                @include font(10px, 12px);
+            }
+
+            ::-moz-placeholder {
+                /* Firefox 19+ */
+                color: $lightgraytext-color;
+                @include font(10px, 12px);
+            }
+
+            :-ms-input-placeholder {
+                color: $lightgraytext-color;
+                @include font(10px, 12px);
+            }
+
+            :-moz-placeholder {
+                /* Firefox 18- */
+                color: $lightgraytext-color;
+                @include font(10px, 12px);
+            }
+        }
+
+        &-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            @include laptop {
+                max-width: 652px;
+            }
+
+            @include tablet {
+                max-width: 720px;
+            }
+
+            @include mobileL {
+                max-width: 375px;
+            }
+        }
+
+        &-button {
+            width: 234px;
+            height: 49px;
+            border: 1px solid $grayborder-color;
+            @include font(14px, 17px);
+            text-transform: uppercase;
+            background-color: $white-color;
+            transition-property: background-color, color, border;
+            transition-duration: 300ms;
+
+            @include mobileL {
+                width: 174px;
+                height: 32px;
+                @include font(12px, 14px);
+            }
+        }
+
+        &-button:hover {
+            background-color: $grayborder-color;
+            color: $white-color;
+        }
+
+
     }
 
-    &__list_buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
 
-    &__list_button {
-        width: 234px;
-        height: 49px;
-        border: 1px solid $grayborder-color;
-        @include font(14px,17px);
-        text-transform: uppercase;
-        background-color: $white-color;
-        transition-property: background-color, color, border;
-        transition-duration: 300ms;
-
-        @include mobileL {
-            width: 174px;
-            height: 32px;
-            @include font(12px,14px);
-        }
-    }
-
-    &__list_button:hover {
-        background-color: $grayborder-color;
-        color: $white-color;
-    }
 
     &__shipping_wrapper {
         margin: 96px 0 0 0;
@@ -175,7 +222,7 @@
     }
 
     &__shipping_heading {
-        @include font(16px,19px);
+        @include font(16px, 19px);
         color: $black-color;
         text-transform: uppercase;
         padding: 13px 0 20px 0;
@@ -186,21 +233,27 @@
         height: 45px;
         margin: 0 0 20px 0;
         padding: 0 0 0 17px;
+
         ::-webkit-input-placeholder {
             color: $lightgraytext-color;
-            @include font(13px,16px);
+            @include font(13px, 16px);
         }
-        ::-moz-placeholder { /* Firefox 19+ */
-            color: $lightgraytext-color; 
-            @include font(13px,16px); 
+
+        ::-moz-placeholder {
+            /* Firefox 19+ */
+            color: $lightgraytext-color;
+            @include font(13px, 16px);
         }
+
         :-ms-input-placeholder {
-            color: $lightgraytext-color; 
-            @include font(13px,16px); 
+            color: $lightgraytext-color;
+            @include font(13px, 16px);
         }
-          :-moz-placeholder { /* Firefox 18- */
-            color: $lightgraytext-color; 
-            @include font(13px,16px); 
+
+        :-moz-placeholder {
+            /* Firefox 18- */
+            color: $lightgraytext-color;
+            @include font(13px, 16px);
         }
 
         @include mobileL {
@@ -213,7 +266,7 @@
         height: 34px;
         @include flex-center;
         text-transform: uppercase;
-        @include font(11px,13px);
+        @include font(11px, 13px);
         background-color: $white-color;
         border: 1px solid $grayborder-color;
         transition-property: background-color, color, border;
@@ -235,8 +288,10 @@
         flex-direction: column;
 
         @include laptop {
-            margin: 20px 0 0 0;;
+            margin: 20px 0 0 0;
+            ;
         }
+
         @include tablet {
             margin: 25px 0 0 0;
         }
@@ -255,13 +310,13 @@
     }
 
     &__subtotal_text {
-        @include font(11px,13px);
+        @include font(11px, 13px);
         color: $grayborder-color;
         text-transform: uppercase;
     }
 
     &__grandtotal_text {
-        @include font(16px,19px);
+        @include font(16px, 19px);
         color: $black-color;
         text-transform: uppercase;
         margin: 12px 0 0 0;
@@ -273,6 +328,7 @@
         justify-content: center;
         align-items: center;
     }
+
     &__total_line {
         width: 275px;
         background-color: $grayline-color;
@@ -284,7 +340,7 @@
         height: 50px;
         background-color: $pink-color;
         color: $white-color;
-        @include font(16px,19px);
+        @include font(16px, 19px);
         text-transform: uppercase;
         margin: 17px 0 0 0;
         border: none;
